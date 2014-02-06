@@ -1,0 +1,146 @@
+// media queries
+@import media-queries
+
+// COLOURS
+$color-green: #49C1A6
+$color-red: #FF505B
+$color-gold: #EAAF7A
+$color-blue: deepskyblue
+
+$color-bg: #222
+$color-bg-header: saturate($color-bg, 20%)
+$color-bg-light: lighten($color-bg, 17%)
+$color-font: lighten($color-bg, 57%)
+$color-bg-checkbox: darken($color-bg, 21%)
+$color-bg-checked: darken($color-bg-checkbox, 21%)
+$color-boxshadow: hsla(0,0%,0%,.8)
+$color-stashed: mix($color-bg, $color-green, 3%)
+$color-unstashed: mix($color-bg, $color-red, 3%)
+$color-divstashed: mix($color-bg, $color-green, 91%)
+$color-divunstashed: mix($color-bg, $color-red, 91%)
+$color-blue-mix: mix($color-bg, $color-blue, 3%)
+$color-blue-mix-bg: mix($color-bg, $color-blue, 91%)
+$color-gold-mix: mix($color-bg, $color-gold, 3%)
+$color-gold-mix-bg: mix($color-bg, $color-gold, 91%)
+$color-gold-mix-button: mix($color-bg, $color-gold, 83%)
+
+// FONT
+$font: 1.3rem sans-serif
+
+// DIMENSIONS
+$cell-height: 64px
+$cell-padding: 10px
+$margin-bottom-area: 2rem
+
+// MIXINS
+@mixin background
+  background-color: $color-bg
+@mixin background-light
+  background-color: $color-bg-light
+  
+@mixin stashed    
+  &.stashed
+    color: $color-stashed
+    // transform: translateX(40%)
+    // -webkit-transform: translateX(40%)
+    opacity: .3
+@mixin unstashed
+  &.unstashed
+    color: $color-unstashed
+
+// .CSS
+html
+  width: 100%
+  overflow-x: hidden
+body
+  font-family: sans-serif
+  margin: 0
+  & *
+    margin: 0
+  @include background
+  font: $font
+  color: $color-font
+  width: 100%
+  div
+    width: 100%
+    line-height: $cell-height
+  div.area
+    // &:last-of-type
+      // margin: 0 $margin-bottom-area
+    // border-bottom: 2px solid $color-bg-light
+    div.header
+      padding: 0 $cell-padding
+      text-transform: uppercase
+      h2.categoryName
+        color: $color-font
+        font-size: 1.9rem
+        line-height: 5rem
+        @include hdpi(2)
+          font-size: 5.9rem
+          line-height: 11rem
+        
+    div.entry
+      transition: .3s
+      // margin: 0 $cell-padding
+      padding: 0 $cell-padding
+      &.stashed
+        background-color: $color-divstashed
+      &.unstashed
+        background-color: $color-divunstashed
+      &.active
+      &:last-of-type
+      p.item
+        // padding: 0 $cell-padding
+        font-size: 1.5rem
+        line-height: 4.6rem
+        @include hdpi(2)
+          font-size: 5.1rem
+          line-height: 9.6rem
+        transition: .3s
+        color: $color-font
+        @include stashed
+        @include unstashed
+  input.addCat
+    margin: $cell-padding 0 0
+    // padding: 0 $cell-padding
+    
+input[type=checkbox]
+  apple-appearance: none
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+  height: 100px
+  width: 100px
+  border: 3px solid #f00
+  background-color: $color-bg-checkbox
+  &:checked
+    background-color: $color-bg-checked
+    box-shadow: none
+    border: none
+
+input[type=text],
+input[type=button]
+  appearance: none
+  -moz-appearance: none
+  apple-appearance: none
+  -webkit-appearance: none
+  border: none
+  // height: 96px
+  transition: .3s
+  width: 100%
+  color: $color-gold-mix
+  // margin: 0 $cell-padding
+  font-size: 1.5rem
+  line-height: 4.6rem
+  @include hdpi(2)
+    font-size: 5.1rem
+    line-height: 9.6rem
+    
+
+input[type=text]
+  background-color: $color-gold-mix-bg
+  padding: 0 $cell-padding
+  
+input[type=button]
+  background-color: $color-gold-mix-button 
+  border: 2px dashed $color-gold-mix

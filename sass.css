@@ -1,0 +1,90 @@
+html {
+  width: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #222222;
+  font: 1.3rem sans-serif;
+  color: #b3b3b3;
+  width: 100%; }
+  body * {
+    margin: 0; }
+  body div {
+    width: 100%;
+    line-height: 64px; }
+  body div.area div.header {
+    padding: 0 10px;
+    text-transform: uppercase; }
+    body div.area div.header h2.categoryName {
+      color: #b3b3b3;
+      font-size: 1.9rem;
+      line-height: 5rem; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        body div.area div.header h2.categoryName {
+          font-size: 5.9rem;
+          line-height: 11rem; } }
+  body div.area div.entry {
+    transition: 0.3s;
+    padding: 0 10px; }
+    body div.area div.entry.stashed {
+      background-color: #25302d; }
+    body div.area div.entry.unstashed {
+      background-color: #352627; }
+    body div.area div.entry p.item {
+      font-size: 1.5rem;
+      line-height: 4.6rem;
+      transition: 0.3s;
+      color: #b3b3b3; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        body div.area div.entry p.item {
+          font-size: 5.1rem;
+          line-height: 9.6rem; } }
+      body div.area div.entry p.item.stashed {
+        color: #47bca2;
+        opacity: 0.3; }
+      body div.area div.entry p.item.unstashed {
+        color: #f84e59; }
+  body input.addCat {
+    margin: 10px 0 0; }
+
+input[type=checkbox] {
+  apple-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 100px;
+  width: 100px;
+  border: 3px solid red;
+  background-color: black; }
+  input[type=checkbox]:checked {
+    background-color: black;
+    box-shadow: none;
+    border: none; }
+
+input[type=text],
+input[type=button] {
+  appearance: none;
+  -moz-appearance: none;
+  apple-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  transition: 0.3s;
+  width: 100%;
+  color: #e4aa77;
+  font-size: 1.5rem;
+  line-height: 4.6rem; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    input[type=text],
+    input[type=button] {
+      font-size: 5.1rem;
+      line-height: 9.6rem; } }
+
+input[type=text] {
+  background-color: #332e29;
+  padding: 0 10px; }
+
+input[type=button] {
+  background-color: #443930;
+  border: 2px dashed #e4aa77; }

@@ -1,0 +1,12 @@
+<div class="area" ng-repeat="cat in db">
+  <div class="header">
+    <h2 ng-click="klik()" class="categoryName" ng-bind="cat.name"></h2>
+  </div>
+  <div class="entry" ng-repeat="item in cat.items" ng-class="pbClass()" ng-click="getActive();postData();">
+    <p ng-bind="item.item" class="item" ng-class="pbClass()"></p>
+  </div>
+  <input type="text" ng-show="cat.name" placeholder="type in an item ..." ng-model="iteminput"/>
+  <input type="button" ng-show="iteminput" value="create item" ng-click="createItem(cat.name,iteminput)"/>
+</div>
+<input type="text" ng-show="db" class="addCat" placeholder="type in a category ..." ng-model="catinput"/>
+<input type="button" ng-show="catinput" value="create category" ng-click="createCat();postData();"/>

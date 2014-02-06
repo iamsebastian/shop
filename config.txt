@@ -1,0 +1,11 @@
+sblei
+https://api.mongolab.com/api/1/databases?apiKey=QLUvvx1j0Xx2xU-E-t1xwNiwvkni5oIk
+QLUvvx1j0Xx2xU-E-t1xwNiwvkni5oIk
+
+List collections
+https://api.mongolab.com/api/1/databases/einkauf/collections?apiKey=QLUvvx1j0Xx2xU-E-t1xwNiwvkni5oIk
+
+List documents
+Example listing all documents in a given collection:
+https://api.mongolab.com/api/1/databases/einkauf/collections/einkauf?apiKey=QLUvvx1j0Xx2xU-E-t1xwNiwvkni5oIk
+
